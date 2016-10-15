@@ -1,10 +1,12 @@
 import React from 'react'
 
+import PreviousImg from '../../assets/previous.svg'
 
-const Previous = ({ onPrevious }) => {
+
+const Previous = ({ onPrevious, isActive }) => {
   return (
-    <div className='previous' onClick={() => onPrevious()}>
-      Previous
+    <div className={isActive ? 'arrow' : 'arrow arrow-passive'} onClick={() => onPrevious()}>
+      <img src={PreviousImg} role='presentation' className={isActive ? 'arrow__image-previous' : 'arrow__image-previous passive'}/>
     </div>
   )
 }
