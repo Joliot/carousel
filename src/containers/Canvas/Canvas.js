@@ -16,7 +16,7 @@ class Canvas extends Component {
       campaigns: null,
       length: 0,
       position: 0,
-      previousIsActive: true,
+      previousIsActive: false,
       nextIsActive: true,
     }
 
@@ -51,17 +51,37 @@ class Canvas extends Component {
 
   handlePrevious(){
     if (this.state.previousIsActive) {
-      this.setState({
-        position: this.state.position - 3,
-      })
+      const position = this.state.position
+      if (position > 3) {
+        this.setState({
+          position: this.state.position - 3,
+          nextIsActive: true,
+        })
+      } else {
+        this.setState({
+          position: this.state.position - position,
+          previousIsActive: false,
+          nextIsActive: true,
+        })
+      }
     }
   }
 
   handleNext(){
     if (this.state.nextIsActive) {
-      this.setState({
-        position: this.state.position + 3,
-      })
+      const difference = this.state.length - (this.state.position + 3)
+      if (difference > 3) {
+        this.setState({
+          position: this.state.position + 3,
+          previousIsActive: true,
+        })
+      } else {
+        this.setState({
+          position: this.state.position + difference,
+          nextIsActive: false,
+          previousIsActive: true,
+        })
+      }
     }
   }
 
