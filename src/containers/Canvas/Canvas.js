@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import Previous from '../Previous/Previous'
-import Carousel from '../Carousel/Carousel'
-import Next from '../Next/Next'
+import Previous from '../../components/previous/previous'
+import Carousel from '../../components/carousel/carousel'
+import Next from '../../components/next/next'
 
 import Spinner from '../../assets/ripple.gif'
 
