@@ -76,7 +76,7 @@
 
 .item__name {
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 110%;
   margin: 1% 0 1% 0;
   color: #333333;
 }
@@ -84,7 +84,7 @@
 .item__perex {
   font-weight: 300;
   color: #8A8A8A;
-  font-size: 0.85em;
+  font-size: 90%;
   margin-bottom: 1%;
 
 }
