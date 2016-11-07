@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CarouselItem from './carouselItem'
+import CarouselItem from './CarouselItem'
 
 const Carousel = ({ campaigns }) => {
   const items = campaigns.map((item) => {
